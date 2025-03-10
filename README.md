@@ -14,3 +14,15 @@ The file does not exist at "/home/kevin/apps/xmtp-v3/node_modules/.vite/deps/wor
 bun install
 bun dev
 ```
+
+# Solution:
+
+Update `vite.config.ts`:
+```ts
+//....
+	optimizeDeps: {
+		exclude: ["@xmtp/wasm-bindings", "@xmtp/browser-sdk"],
+		include: ["@xmtp/proto"],
+	},
+//.....
+```
