@@ -1,0 +1,83 @@
+{
+	"name": "@xmtp/browser-sdk",
+	"version": "0.0.23",
+	"description": "XMTP client SDK for browsers written in TypeScript",
+	"keywords": [
+		"xmtp",
+		"messaging",
+		"web3",
+		"sdk",
+		"js",
+		"ts",
+		"javascript",
+		"typescript"
+	],
+	"homepage": "https://github.com/xmtp/xmtp-js",
+	"bugs": {
+		"url": "https://github.com/xmtp/xmtp-js/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/xmtp/xmtp-js.git",
+		"directory": "sdks/browser-sdk"
+	},
+	"license": "MIT",
+	"author": "XMTP Labs <eng@xmtp.com>",
+	"sideEffects": false,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": ["dist", "src"],
+	"browserslist": {
+		"production": [">0.2%", "not dead", "not op_mini all"],
+		"development": [
+			"last 3 chrome versions",
+			"last 3 firefox versions",
+			"last 3 safari versions"
+		]
+	},
+	"dependencies": {
+		"@xmtp/content-type-group-updated": "^2.0.0",
+		"@xmtp/content-type-primitives": "^2.0.0",
+		"@xmtp/content-type-text": "^2.0.0",
+		"@xmtp/proto": "^3.72.3",
+		"@xmtp/wasm-bindings": "^0.0.21",
+		"uuid": "^11.0.3"
+	},
+	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^12.1.2",
+		"@testing-library/dom": "^10.4.0",
+		"@testing-library/jest-dom": "^6.6.3",
+		"@types/uuid": "^10.0.0",
+		"@vitest/browser": "^2.1.3",
+		"@vitest/coverage-v8": "^2.0.3",
+		"@web/rollup-plugin-copy": "^0.5.1",
+		"playwright": "^1.49.1",
+		"rollup": "^4.34.9",
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-filesize": "^10.0.0",
+		"rollup-plugin-tsconfig-paths": "^1.5.2",
+		"typedoc": "^0.26.11",
+		"typescript": "^5.7.3",
+		"viem": "^2.17.4",
+		"vite": "^6.0.7",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^2.1.3"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true,
+		"registry": "https://registry.npmjs.org/"
+	}
+}
